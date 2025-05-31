@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #181818; /* black */
+  color: #ffd700; /* gold */
+  line-height: 1.6;
+}
+
+header {
+  background-color: #000000; /* black */
+  color: #ffd700; /* gold */
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+header h1 {
+  text-align: left;
+  margin: 0;
+  color: #ffd700; /* gold */
+  letter-spacing: 2px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  position: relative;
+}
+
+nav ul > li {
+  margin: 0 0 0 15px;
+  position: relative;
+}
+
+nav ul > li > a {
+  color: #ffd700; /* gold */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px;
+  display: block;
+  font-family: 'Georgia', serif;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #222; /* dark for dropdown */
+  min-width: 180px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li ul li a {
+  color: #ffd700; /* gold */
+  display: block;
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  font-family: 'Georgia', serif;
+}
+
+nav ul li ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li ul li a:hover {
+  background: #ffd700; /* gold */
+  color: #181818; /* black */
+}
+
+.profile-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  background: #222; /* dark */
+  padding: 6px 14px 6px 8px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(45,28,15,0.08);
+}
+
+.profile-menu a {
+  text-decoration: none;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  border: 2px solid #fff;
+}
+
+.profile-name {
+  color: #ffd700; /* gold */
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.hero {
+  background-color: #181818; /* black */
+  text-align: center;
+  padding: 210px 30px; /* diperbesar dari 60px ke 120px */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffd700; /* gold */
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ffd700; /* gold */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffd700; /* gold */
+  color: #181818; /* black */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px solid #ffd700; /* gold border */
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 2px 8px rgba(45,28,15,0.08);
+}
+
+.btn:hover {
+  background-color: #181818; /* black */
+  color: #ffd700; /* gold */
+  border: 2px solid #ffd700;
+}
+
+.produk {
+  padding: 40px 20px;
+  text-align: center;
+  background: #181818; /* black */
+}
+
+.produk-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #222;
+  padding: 60px; /* sebelumnya 40px */
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(45,28,15,0.10);
+  width: 300px; /* sebelumnya 200px */
+  border: 2px solid #ffd700; /* gold border */
+  transition: box-shadow 0.2s, border 0.2s, transform 0.25s cubic-bezier(.4,2,.6,1); /* tambahkan animasi transform */
+}
+
+.card:hover {
+  box-shadow: 0 0 24px 2px #ffd700;
+  border: 2px solid #ffd700;
+  transform: scale(1.06); /* animasi membesar */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #ffd700;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #ffd700;
+  font-family: 'Georgia', serif;
+}
+
+.kontak {
+  background-color: #181818;
+  color: #ffd700;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #181818;
+  color: #ffd700;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+}
+
+.produk-detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #222;
+  border-radius: 16px;
+  box-shadow: 0 0 48px 10px #fcd81033;
+  padding: 48px 36px;
+  color: #ffd700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+
+.produk-detail-img {
+  flex: 1 1 220px;
+  min-width: 180px;
+  max-width: 340px;
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  background: #181818;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.produk-detail-info {
+  flex: 2 1 300px;
+  min-width: 260px;
+}
+
+.produk-detail-info h2 {
+  color: #ffd700;
+  font-family: 'Georgia', serif;
+  margin-bottom: 12px;
+  font-size: 2.6rem;
+}
+
+.produk-detail-info p {
+  color: #ffd700;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+
+.produk-detail-info .harga {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 18px;
+}
+
+.produk-detail-info .btn {
+  font-size: 1.25rem;
+  padding: 16px 38px;
+}
+
+.produk-detail-info .btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.produk-detail-info .btn-group .btn {
+  margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  nav {
+    width: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    flex: 1;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: auto;
+    justify-content: flex-start;
+    margin-right: 48px; /* beri ruang untuk profile */
+  }
+
+  nav ul > li {
+    margin: 0 0 10px 0;
+  }
+
+  nav ul > li > a {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  .profile-menu {
+    margin-left: 0;
+    margin-top: 0;
+    width: auto;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .profile-img {
+    width: 38px;
+    height: 38px;
+    margin-right: 0;
+    border: 2px solid #ffd700;
+  }
+
+  .profile-name {
+    display: none;
+  }
+
+  .produk-detail-container {
+    flex-direction: column;
+    padding: 24px 4px;
+    gap: 24px;
+  }
+
+  .produk-detail-img {
+    max-width: 98vw;
+    padding: 8px;
+  }
+
+  .produk-detail-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .produk-detail-info p {
+    font-size: 1.1rem;
+  }
+
+  .produk-detail-info .btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .produk-detail-info .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

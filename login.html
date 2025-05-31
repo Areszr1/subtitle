@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #181818 60%, #ffd700 100%);
+        }
+        .login-container {
+            background: #222;
+            padding: 40px 28px;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+            width: 340px;
+            border: 2px solid #ffd700;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #ffd700;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ffd700;
+            font-family: 'Georgia', serif;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1.5px solid #ffd700;
+            border-radius: 6px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background: #181818;
+            color: #ffd700;
+            font-size: 1rem;
+            font-family: 'Georgia', serif;
+            transition: border 0.2s;
+        }
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border: 1.5px solid #fff;
+            outline: none;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #ffd700;
+            color: #181818;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(45,28,15,0.08);
+            margin-top: 16px; /* ubah dari 8px ke 16px untuk jarak lebih */
+            margin-bottom: 10px; /* tambahkan jarak bawah */
+        }
+        .login-container input[type="submit"]:hover {
+            background: #181818;
+            color: #ffd700;
+            border: 1.5px solid #ffd700;
+        }
+        .login-container .footer {
+            text-align: center;
+            margin-top: 18px;
+            color: #ffd700;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="toko online.html" method="get">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+        <div class="footer">
+            &copy; 2025 My project. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

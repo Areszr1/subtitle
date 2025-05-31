@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pembelian</title>
+  <link rel="stylesheet" href="toko css.css">
+  <style>
+    .pembelian-container {
+      max-width: 480px;
+      margin: 48px auto;
+      background: #222;
+      border-radius: 16px;
+      box-shadow: 0 0 24px 2px #ffd70033;
+      padding: 36px 24px;
+      color: #ffd700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pembelian-container h2 {
+      color: #ffd700;
+      font-family: 'Georgia', serif;
+      margin-bottom: 18px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .pembelian-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #ffd700;
+      font-family: 'Georgia', serif;
+    }
+    .pembelian-form input,
+    .pembelian-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1.5px solid #ffd700;
+      border-radius: 6px;
+      background: #181818;
+      color: #ffd700;
+      font-size: 1rem;
+      font-family: 'Georgia', serif;
+      transition: border 0.2s;
+    }
+    .pembelian-form input:focus,
+    .pembelian-form select:focus {
+      border: 1.5px solid #fff;
+      outline: none;
+    }
+    .pembelian-form .btn {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 12px 0;
+      margin-top: 8px;
+    }
+    .pembelian-success {
+      color: #ffd700;
+      background: #181818;
+      border-radius: 8px;
+      padding: 17px;
+      margin-top: 18px;
+      text-align: center;
+      font-size: 1.1rem;
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .pembelian-container {
+        padding: 18px 6px;
+      }
+      .pembelian-container h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Toko Online Kami</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Menu</a>
+          <ul>
+            <li><a href="toko online.html">Beranda</a></li>
+            <li><a href="toko online.html#produk">Produk Unggulan</a></li>
+            <li><a href="toko online.html#kontak">Kontak</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <div class="pembelian-container">
+      <h2>Formulir Pembelian</h2>
+      <form class="pembelian-form" id="formPembelian" autocomplete="off">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="alamat">Alamat Pengiriman</label>
+        <input type="text" id="alamat" name="alamat" required>
+
+        <label for="produk">Produk</label>
+        <select id="produk" name="produk" required>
+          <option value="">-- Pilih Produk --</option>
+          <option value="Produk 1">Produk 1 - Kaos Roblox Premium</option>
+          <option value="Produk 2">Produk 2</option>
+          <option value="Produk 3">Produk 3</option>
+          <option value="Produk 4">Produk 4</option>
+        </select>
+
+        <label for="jumlah">Jumlah</label>
+        <input type="number" id="jumlah" name="jumlah" min="1" value="1" required>
+
+        <label for="metode">Metode Pembayaran</label>
+        <select id="metode" name="metode" required>
+          <option value="">-- Pilih Metode --</option>
+          <option value="Transfer Bank">Transfer Bank</option>
+          <option value="COD">COD</option>
+          <option value="E-Wallet">E-Wallet</option>
+        </select>
+
+        <button type="submit" class="btn">Beli Sekarang</button>
+      </form>
+      <div class="pembelian-success" id="pembelianSuccess">
+        Terima kasih! Pesanan Anda telah diterima.
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Toko Online Kelompok. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById('formPembelian').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('pembelianSuccess').style.display = 'block';
+      this.reset();
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* CSS untuk tampilan produk detail (produk-detail-container, produk-detail-img, produk-detail-info, dll) */
+
+.produk-detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #222;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 2px #ffd70033;
+  padding: 48px 36px;
+  color: #ffd700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+
+.produk-detail-img {
+  flex: 1 1 220px;
+  min-width: 180px;
+  max-width: 340px;
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  background: #181818;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.produk-detail-info {
+  flex: 2 1 300px;
+  min-width: 260px;
+}
+
+.produk-detail-info h2 {
+  color: #ffd700;
+  font-family: 'Georgia', serif;
+  margin-bottom: 12px;
+  font-size: 2.6rem;
+}
+
+.produk-detail-info p {
+  color: #ffd700;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+
+.produk-detail-info .harga {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 18px;
+}
+
+.produk-detail-info .btn {
+  font-size: 1.25rem;
+  padding: 16px 38px;
+}
+
+.produk-detail-info .btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.produk-detail-info .btn-group .btn {
+  margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .produk-detail-container {
+    flex-direction: column;
+    padding: 24px 4px;
+    gap: 24px;
+  }
+
+  .produk-detail-img {
+    max-width: 98vw;
+    padding: 8px;
+  }
+
+  .produk-detail-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .produk-detail-info p {
+    font-size: 1.1rem;
+  }
+
+  .produk-detail-info .btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .produk-detail-info .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ...tambahkan CSS lain yang digunakan di tampilanproduk.html jika ada... */

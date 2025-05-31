@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tampilan Kode</title>
+  <style>
+    body {
+      background: #181818;
+      color: #ffd700;
+      font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-top: 32px;
+      margin-bottom: 18px;
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      color: #ffd700;
+    }
+    .code-container {
+      background: #222;
+      border: 2px solid #ffd700;
+      border-radius: 10px;
+      padding: 24px;
+      width: 90vw;
+      max-width: 800px;
+      margin-bottom: 32px;
+      box-shadow: 0 0 18px rgba(45,28,15,0.10);
+      position: relative;
+    }
+    pre {
+      margin: 0;
+      overflow-x: auto;
+      font-size: 1.15rem;
+      color: #ffd700;
+      background: transparent;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #ffd700;
+      color: #181818;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 18px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .copy-btn:hover {
+      background: #181818;
+      color: #ffd700;
+      border: 2px solid #ffd700;
+    }
+    .btn-kembali {
+      display: inline-block;
+      margin-top: 12px;
+      margin-bottom: 32px;
+      padding: 12px 32px;
+      background: #ffd700;
+      color: #181818;
+      border: 2px solid #ffd700;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      box-shadow: 0 2px 8px rgba(45,28,15,0.08);
+    }
+    .btn-kembali:hover {
+      background: #181818;
+      color: #ffd700;
+      border: 2px solid #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <h1>Preview Kode</h1>
+  <div style="margin-bottom:16px;">
+    <button class="copy-btn" style="position:static; margin-right:8px;" onclick="showTab('html')">HTML</button>
+    <button class="copy-btn" style="position:static;" onclick="showTab('css')">CSS</button>
+  </div>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode()">Copy</button>
+    <pre id="code-html" style="display:block;">
+    
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Detail Produk&lt;/title&gt;
+  &lt;link rel="stylesheet" href="toko css.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My project&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href="#"&gt;Menu&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href="toko online.html"&gt;Beranda&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="toko online.html#produk"&gt;Produk Unggulan&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="toko online.html#kontak"&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="profile-menu"&gt;
+        &lt;img src="../df.png" alt="Profile" class="profile-img"&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;div class="produk-detail-container"&gt;
+      &lt;video class="produk-detail-img" src="ABG.mp4" type="video/mp4" controls autoplay loop&gt;
+        &lt;track src="subtitle.vtt" kind="subtitles" srclang="id" label="Bahasa Indonesia" default&gt;
+      &lt;/video&gt;
+      &lt;div class="produk-detail-info"&gt;
+        &lt;h2&gt;kelompok 2&lt;/h2&gt;
+        &lt;p&gt;
+         Berikut adalah video yang menggunakan subtitle Bahasa Indonesia yang saya buat menggunakan notepad.
+        &lt;/p&gt;
+        &lt;div class="harga"&gt;&lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+          &lt;a href="toko online.html" class="btn"&gt;Kembali&lt;/a&gt;
+          &lt;button class="btn"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2025 My project. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    </pre>
+    <pre id="code-css" style="display:none;">
+/* CSS untuk tampilan produk detail */
+.produk-detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #222;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 2px #ffd70033;
+  padding: 48px 36px;
+  color: #ffd700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+
+.produk-detail-img {
+  flex: 1 1 220px;
+  min-width: 180px;
+  max-width: 340px;
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  background: #181818;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.produk-detail-info {
+  flex: 2 1 300px;
+  min-width: 260px;
+}
+
+.produk-detail-info h2 {
+  color: #ffd700;
+  font-family: 'Georgia', serif;
+  margin-bottom: 12px;
+  font-size: 2.6rem;
+}
+
+.produk-detail-info p {
+  color: #ffd700;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+
+.produk-detail-info .harga {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 18px;
+}
+
+.produk-detail-info .btn {
+  font-size: 1.25rem;
+  padding: 16px 38px;
+}
+
+.produk-detail-info .btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.produk-detail-info .btn-group .btn {
+  margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .produk-detail-container {
+    flex-direction: column;
+    padding: 24px 4px;
+    gap: 24px;
+  }
+
+  .produk-detail-img {
+    max-width: 98vw;
+    padding: 8px;
+  }
+
+  .produk-detail-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .produk-detail-info p {
+    font-size: 1.1rem;
+  }
+
+  .produk-detail-info .btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .produk-detail_info .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+    </pre>
+  </div>
+  <a href="tampilanproduk1.html" class="btn-kembali">Kembali</a>
+  <script>
+    function showTab(tab) {
+      document.getElementById('code-html').style.display = tab === 'html' ? 'block' : 'none';
+      document.getElementById('code-css').style.display = tab === 'css' ? 'block' : 'none';
+    }
+    function copyCode() {
+      const htmlVisible = document.getElementById('code-html').style.display !== 'none';
+      const code = htmlVisible
+        ? document.getElementById('code-html').innerText
+        : document.getElementById('code-css').innerText;
+      navigator.clipboard.writeText(code);
+    }
+  </script>
+</body>
+</html>
